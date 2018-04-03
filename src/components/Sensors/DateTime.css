@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'digital';
+    src: url('../../../public/fonts/digital-7.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+#clock{
+    font-family: 'digital';
+}

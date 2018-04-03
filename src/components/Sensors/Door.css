@@ -1,0 +1,13 @@
+.DoorImgCover h3{
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:34px;
+    color: forestgreen;
+}
+.DoorImgCover img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}

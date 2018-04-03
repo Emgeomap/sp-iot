@@ -1,0 +1,14 @@
+.HumidityImgCover h1{
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 20%;
+}
+#humudityChart{
+    position: absolute;
+    height: 50%;
+    width: 99%;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%)    
+}

@@ -1,0 +1,50 @@
+.card {
+    width: 100%;
+    height: 100%;
+}
+.card-header{
+    text-align: center;
+}
+.card-body{
+    padding: 10px !important;
+}
+.card-link{
+    position: absolute;
+    bottom: 6px;
+}
+.HumidityImgCover .card-img-top {
+    width: 60px !important;
+    display: inline-block;
+    position: relative;
+}
+.HeatImgCover .card-img-top {
+    width: 60px !important;
+    display: inline-block;
+    position: relative;
+}
+.DoorImgCover .card-img-top {
+    width: 200px !important;
+    display: inline-block;
+    position: relative;
+}
+.col-sm-4{
+    /* border: 1px solid red; */
+    padding: 4px !important;
+    height: 360px;
+}
+.col-sm-2{
+    /* border: 1px solid red; */
+    padding: 4px !important;
+    height: 360px;
+}
+.col-sm-12{
+    padding: 0 !important;
+    border: 1px solid #CAD2C5;
+    box-shadow: 3px 3px 8px 2px #CAD2C5;
+}
+
+.tableHeader{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold
+}
