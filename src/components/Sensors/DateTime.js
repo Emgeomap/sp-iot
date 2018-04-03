@@ -39,7 +39,7 @@ export default class DateTime extends Component {
             minute = rawMinute;
         }
         if (rawHoure < 10) {
-            zero.concat(rawHoure);
+           hour= zero.concat(rawHoure);
         } else {
             hour = rawHoure;
         } if (rawDayOfMounth < 10) {

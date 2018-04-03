@@ -1,8 +1,9 @@
 import React from 'react';
 import './Humidity.css';
+import {connect} from 'react-redux';
 import HumudityChart from '../Sensors/Charts/HumudityChart';
 
-export default class Humidity extends React.Component {
+export class Humidity extends React.Component {
     render() {
         return (
             <div className="card text-white bg-dark mb-3" id="HumidityCard">
@@ -20,3 +21,10 @@ export default class Humidity extends React.Component {
         )
     }
 }
+const mapStateToProps = (state, ownProps) => (
+    {
+        heat: state.TempuratureReducer.heat
+    }
+)
+Humidity = connect(mapStateToProps)(Humidity);
+export default Humidity;

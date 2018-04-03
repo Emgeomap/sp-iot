@@ -12,10 +12,10 @@ export default class Content extends React.Component {
             <div className="container-fluid bg-dark">
                 <div className="row">
                     <div className="col-sm-4 coverSensorColumn">
-                        <Heat />
+                        <Heat heat="75"/>
                     </div>
                     <div className="col-sm-4 coverSensorColumn">
-                        <Humidity />  
+                        <Humidity />
                     </div>
                     <div className="col-sm-2 coverSensorColumn">
                         <Door />
@@ -26,7 +26,7 @@ export default class Content extends React.Component {
                 </div>
                 <div className="row py-3">
                     <div className="col-sm-10 offset-1">
-                    <h4 className="text-muted tableHeader">İşçi dəvamiyyət cədvəli </h4>
+                        <h4 className="text-muted tableHeader">İşçi dəvamiyyət cədvəli </h4>
                         <EmployeeTable />
                     </div>
                 </div>

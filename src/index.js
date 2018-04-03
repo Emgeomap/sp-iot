@@ -1,5 +1,12 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import App from './app';
 import './index.css';
-render(<App />,document.getElementById('wrap'));
+import { Provider } from 'react-redux';
+import {MyStore} from '../redux/Store';
+
+render(
+    <Provider store={MyStore}>
+        <App />
+    </Provider>,
+    document.getElementById('wrap'));
