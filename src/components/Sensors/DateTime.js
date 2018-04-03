@@ -113,10 +113,11 @@ export default class DateTime extends Component {
             <div className="card text-white bg-dark mb-3" id="DoorCard">
                 <div className="card-header h4">Tarix</div>
                 <div className="card-body">
-                    <div className="DoorImgCover">
-                        <p id="clock">Saat : {hour + ":" + minute + ":" + second}</p>
-                        <p>Tarix : {dayOfMounth + "." + mounth + "." + this.state.time.getFullYear()}</p>
-                        <p>Həftənin : {dayOfWeekend}</p>
+                    <div className="DateImgCover">
+                        <p id="clockId">{hour + ":" + minute + ":" + second}</p>
+                        <p id="weekendId">{dayOfWeekend}</p>
+                        <h2 id="dateId">  {dayOfMounth + " " + mounth}</h2>
+                        <h2 id="yearId"> {this.state.time.getFullYear()}</h2>
                     </div>
                 </div>
             </div>
