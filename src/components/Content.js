@@ -24,12 +24,12 @@ export default class Content extends React.Component {
                 });
         }
     }
-    componentWillMount() {
-        setInterval(this.interval, 1000);
-    }
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
+    // componentDidMount() {
+    //     setInterval(this.interval, 1000);
+    // }
+    // componentWillUnmount() {
+    //     clearInterval(this.interval);
+    // }
     render() {
         return (
             <div className="container-fluid bg-dark">
