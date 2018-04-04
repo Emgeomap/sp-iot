@@ -9,6 +9,6 @@ export function Set_Heat(heat) {
 export function Set_Humudity(humudity) {
     MyStore.dispatch({
         type: "SET_HUMUDITY",
-        payload: { humudity }
+        payload: humudity 
     })
 }
