@@ -8,7 +8,7 @@ export default function Reducer(state = initialState, action) {
             return Object.assign({}, state, { humudity: action.payload.humudity })
             break;
         case "SET_HEAT":
-            return Object.assign({}, state, { heat: action.payload.heat })
+            return Object.assign({}, state, { heat: action.payload })
             break;
         default:
             return state;

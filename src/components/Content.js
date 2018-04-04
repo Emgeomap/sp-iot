@@ -3,16 +3,39 @@ import Heat from '../components/Sensors/Heat';
 import Humidity from '../components/Sensors/Humidity';
 import Door from '../components/Sensors/Door';
 import DateTime from '../components/Sensors/DateTime';
-import EmployeeTable from '../components/Sensors/EmployeeTable'
+import axios from 'axios';
+import EmployeeTable from '../components/Sensors/EmployeeTable';
+import { Set_Heat, Set_Humudity } from '../../redux/actions';
 import './Content.css';
 
 export default class Content extends React.Component {
+    constructor(props) {
+        super(props);
+        this.interval = () => {
+            let _this = this;
+            axios.get('http://localhost:3000/tempurature')
+                .then(function (data) {
+                    console.log(data)
+                   Set_Heat(data.data.heat);
+                   Set_Humudity(data.data.humudity)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    }
+    componentWillMount() {
+        setInterval(this.interval, 1000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
     render() {
         return (
             <div className="container-fluid bg-dark">
                 <div className="row">
-                    <div className="col-sm-4 coverSensorColumn">
-                        <Heat heat="75"/>
+                    <div className="col-sm-4 coverSensorColumn" onClick={alert}>
+                        <Heat/>
                     </div>
                     <div className="col-sm-4 coverSensorColumn">
                         <Humidity />

@@ -11,7 +11,7 @@ export class Humidity extends React.Component {
                 <div className="card-body">
                     <div className="HumidityImgCover">
                         <img className="card-img-top" src="./public/img/humidity.png" alt="Card image cap" />
-                        <h1>39 %</h1>
+                        <h1>{this.props.humudity}%</h1>
                     </div>
                     <div id="humudityChart">
                         <HumudityChart />
@@ -23,7 +23,7 @@ export class Humidity extends React.Component {
 }
 const mapStateToProps = (state, ownProps) => (
     {
-        heat: state.TempuratureReducer.heat
+        humudity: state.TempuratureReducer.humudity
     }
 )
 Humidity = connect(mapStateToProps)(Humidity);
