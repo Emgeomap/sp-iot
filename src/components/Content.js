@@ -12,30 +12,29 @@ export default class Content extends React.Component {
     constructor(props) {
         super(props);
         this.interval = () => {
-            let _this = this;
-            axios.get('http://localhost:3000/tempurature')
+            axios.get('http://localhost:3000/gettempurature')
                 .then(function (data) {
-                    console.log(data)
-                   Set_Heat(data.data.heat);
-                   Set_Humudity(data.data.humudity)
+                    console.log(data);
+                    Set_Heat(data.data.heat);
+                    Set_Humudity(data.data.humudity)
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
         }
     }
-    // componentDidMount() {
-    //     setInterval(this.interval, 1000);
-    // }
-    // componentWillUnmount() {
-    //     clearInterval(this.interval);
-    // }
+    componentDidMount() {
+        setInterval(this.interval, 5000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
     render() {
         return (
             <div className="container-fluid bg-dark">
                 <div className="row">
                     <div className="col-sm-4 coverSensorColumn" onClick={alert}>
-                        <Heat/>
+                        <Heat />
                     </div>
                     <div className="col-sm-4 coverSensorColumn">
                         <Humidity />
