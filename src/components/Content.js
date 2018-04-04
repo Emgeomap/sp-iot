@@ -14,7 +14,6 @@ export default class Content extends React.Component {
         this.interval = () => {
             axios.get('http://localhost:3000/gettempurature')
                 .then(function (data) {
-                    console.log(data);
                     Set_Heat(data.data.heat);
                     Set_Humudity(data.data.humudity)
                 })

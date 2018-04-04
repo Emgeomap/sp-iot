@@ -22,6 +22,7 @@ class HeatChart extends Component {
                 <Line
                     data={this.state.chartData}
                     options={{
+                        responsive:true,
                         scales: {
                             yAxes: [{
                                 ticks: {

@@ -4,6 +4,13 @@ import { Table } from 'reactstrap';
 export default class EmployeeTable extends React.Component {
   render() {
     return (
+      /*
+      var indents = [];
+      for (var i = 0; i < this.props.level; i++) {
+        indents.push(<span className='indent' key={i}></span>);
+      }
+      return indents;
+       */
       <Table hover dark>
         <thead>
           <tr>

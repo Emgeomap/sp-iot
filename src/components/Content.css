@@ -48,3 +48,6 @@
     text-decoration: underline;
     font-weight: bold
 }
+canvas{
+    width: 100%;
+}
